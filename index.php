@@ -36,6 +36,21 @@
           <input type="text" placeholder="검색할 키워드를 입력해 주세요.">
           <button><img src="/lbcamp/img/gocamp_icon.png" alt=""></button>
         </div>
+        <div class="drop_bar">
+          <div class="dropdown">
+            <div class="select">
+              <span>내 주변 캠핑장 검색</span>
+              <i class="fa fa-chevron-down"></i>
+            </div>
+            <ul class="dropdown_menu">
+              <li><a href="#">반경 10KM 검색</a></li>
+              <li><a href="#">반경 20KM 검색</a></li>
+              <li><a href="#">반경 30KM 검색</a></li>
+              <li><a href="#">반경 40KM 검색</a></li>
+              <li><a href="#">반경 50KM 검색</a></li>
+            </ul>
+          </div>    
+        </div>
       </div>
     </div>
   </div>

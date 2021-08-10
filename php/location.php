@@ -8,7 +8,7 @@
 
   $ch = curl_init();
   $url = 'http://api.visitkorea.or.kr/openapi/service/rest/GoCamping/locationBasedList'; /*URL*/
-  $queryParams = '?' . urlencode('ServiceKey') . '=B3xAD2Ck93FPbCmJPTuhYuSOZLrtbLBz0hZ5w5JVvwq7wAZP2jpuRIYQUkFrcRExXxZlp%2BQWeN5nObGl3RMvTg%3D%3D'; /*Service Key*/
+  $queryParams = '?' . urlencode('ServiceKey') . '='; /*Service Key*/
   $queryParams .= '&' . urlencode('pageNo') . '=' . urlencode('1'); /**/
   $queryParams .= '&' . urlencode('numOfRows') . '=' . urlencode('10'); /**/
   $queryParams .= '&' . urlencode('MobileOS') . '=' . urlencode('ETC'); /**/
