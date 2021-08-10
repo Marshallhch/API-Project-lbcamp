@@ -65,7 +65,7 @@ body {
 .bg{position:absolute; left:0; bottom:0; transform:scale(1.1) translateY(70px); width:100%;}/*transform의 속성값을 중복해서 사용할 때는 값을 콤마 없이 공백으로 나열*/
 
 /* Header Style Code */
-header{background:#547c61; padding:15px 0; z-index:999;}
+header{background:#547c61; padding:15px 0; z-index:999; position:relative;}
 header a{font-size:18px; color:#fff;}
 header .center{display:flex; justify-content: space-between; align-items: center;}
 
@@ -90,7 +90,7 @@ span.bar_line:nth-child(2){margin:5px auto;}
 .contents_bar .search_bar button:after{content:''; position:absolute; width:1px; background:#547c61; left:0; height:100%; top:0;}
 .contents_bar .search_bar button img{width:15px;}
 
-.contents_bar .drop_bar{width:100%; margin-top:10px;}
+.contents_bar .drop_bar{width:100%; margin-top:10px; position:relative; z-index:999;}
 .contents_bar .drop_bar .dropdown{width:100%; background:#547c61; position:relative; font-size:14px; color:#fff; text-align:center; border-radius:20px; transition:all 0.3s;}
 .contents_bar .drop_bar .dropdown.on{border-radius:20px 20px 0 0;}
 
@@ -104,7 +104,10 @@ span.bar_line:nth-child(2){margin:5px auto;}
 
 /* Search Position Pages Style Code */
 .contents_bar.search_position{padding:30px 0;}
-.map_img{position:absolute; width:100%; height:100%; left:0; top:0;}
+.map_img{position:absolute; width:100%; height:100%; left:0; top:0; z-index:998;}
+.map_img img{width:100%;}
 
-
+/* Bottom Box Style Code */
+.bt_box{width:100%; height:330px; background:#fff; position:absolute; bottom:0; z-index:999; border-radius:15px 15px 0 0; overflow:hidden;}
+.bt_box span{width:100%; color:#fff; background:#547c61; display:flex; padding:10px; font-size:18px; justify-content: center;}
 

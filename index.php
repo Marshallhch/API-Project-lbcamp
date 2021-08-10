@@ -43,11 +43,11 @@
               <i class="fa fa-chevron-down"></i>
             </div>
             <ul class="dropdown_menu">
-              <li><a href="#">반경 10KM 검색</a></li>
-              <li><a href="#">반경 20KM 검색</a></li>
-              <li><a href="#">반경 30KM 검색</a></li>
-              <li><a href="#">반경 40KM 검색</a></li>
-              <li><a href="#">반경 50KM 검색</a></li>
+              <li><a href="/lbcamp/search_position.php?radi=10000">반경 10KM 검색</a></li>
+              <li><a href="/lbcamp/search_position.php?radi=20000">반경 20KM 검색</a></li>
+              <li><a href="/lbcamp/search_position.php?radi=30000">반경 30KM 검색</a></li>
+              <li><a href="/lbcamp/search_position.php?radi=40000">반경 40KM 검색</a></li>
+              <li><a href="/lbcamp/search_position.php?radi=50000">반경 50KM 검색</a></li>
             </ul>
           </div>    
         </div>
