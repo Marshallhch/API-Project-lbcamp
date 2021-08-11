@@ -43,6 +43,8 @@ body {
   height: 100%;
   overflow: hidden;
 }
+
+body#detail_page{height:auto; overflow:auto;}
 .clearfix:after {
   content: "";
   display: block;
@@ -60,6 +62,8 @@ body {
   overflow-y: hidden;
   position: relative;
 }
+
+body#detail_page .wrap{overflow-y:auto;}
 
 /* Background Image Style Code */
 .bg{position:absolute; left:0; bottom:0; transform:scale(1.1) translateY(70px); width:100%;}/*transform의 속성값을 중복해서 사용할 때는 값을 콤마 없이 공백으로 나열*/

@@ -23,9 +23,11 @@ navigator.geolocation.getCurrentPosition((position) => {
         currentItems = `
                         <div class="carousel_item">
                           <div class="item_card">
-                            <div class="sl_img">
-                              <img src="${data.firstImageUrl}" alt="">
-                            </div>
+                            <a href="/lbcamp/detail_position.php?lon=${data.mapX}&lat=${data.mapY}">
+                              <div class="sl_img">
+                                <img src="${data.firstImageUrl}" alt="" onerror="this.src='/lbcamp/img/no_image.png'">
+                              </div>
+                            </a>
                             <div class="sl_txt">
                               <h2>${data.facltNm}</h2>
                               <p>${data.addr1}</p>
@@ -63,6 +65,25 @@ navigator.geolocation.getCurrentPosition((position) => {
     }
   });
 
+});
+
+//carousel slide
+$(document).ajaxComplete(function(){// ajax 데이터가 DOM으로 모두 로드된 이후 실행되는 함수
+  let slider = $('.owl-carousel');
+  slider.each(function () {
+    $(this).owlCarousel({
+      loop:false,
+      margin: 5,
+      autoHeight: false,
+      responsive:{
+        0:{
+          items: 1,
+          stagePadding: 20,
+          margin: 15,
+        }
+      }
+    });
+  });
 });
 
 
