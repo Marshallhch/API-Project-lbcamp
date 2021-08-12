@@ -59,7 +59,7 @@ $.ajax({
 
     function initMap() {
       var centerTarget = { lat: numMapy, lng: numMapx };
-      map = new google.maps.Map( document.getElementById('map'), {
+      map = new google.maps.Map(document.getElementById('map'), {
           zoom: 12,
           center: centerTarget
         }

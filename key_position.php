@@ -82,5 +82,15 @@
   <script src="/lbcamp/js/owl.carousel.js"></script>
   <script src="/lbcamp/js/main.js"></script>
   <script src="/lbcamp/js/key_position.js"></script>
+  <script>
+
+    const key_btn = document.querySelector('.search_bar button');
+
+    key_btn.addEventListener('click', function(){
+      const key_val = document.querySelector('.search_bar input').value;
+      location.href=`/lbcamp/key_position.php?key_val=${key_val}`;
+    });
+
+  </script>
 </body>
 </html>

@@ -58,7 +58,46 @@ $.ajax({
         initMap();
       });
     } else {
-      // console.log(item);
+      currentItems = `
+                        <div class="carousel_item">
+                          <div class="item_card">
+                            <a href="/lbcamp/detail_position.php?lon=${item.mapX}&lat=${item.mapY}">
+                              <div class="sl_img">
+                                <img src="${item.firstImageUrl}" alt="" onerror="this.src='/lbcamp/img/no_image.png'">
+                              </div>
+                            </a>
+                            <div class="sl_txt">
+                              <h2>${item.facltNm}</h2>
+                              <p>${item.addr1}</p>
+                            </div>
+                            <div class="sl_icons">
+                              <img src="img/ico_mart.png" alt="">
+                              <em>${item.sbrsCl}</em>
+                            </div>
+                          </div>
+                        </div>
+                      `;
+        contentsBox.innerHTML += currentItems;
+
+        //google map logics here..
+        var map;
+
+        function initMap() {
+          var centerTarget = { lat: Number(item.mapY), lng: Number(item.mapX) };
+          map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 12,
+              center: centerTarget
+            }
+          );
+
+          new google.maps.Marker({
+            position: centerTarget,
+            map: map,
+            icon: '/lbcamp/img/marker.png'
+          });
+
+        }
+        initMap();
     } 
 
     // google map logics here..
