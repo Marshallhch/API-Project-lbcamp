@@ -22,3 +22,6 @@
 - 상세 데이터 접근키 제공 안함 // 각각의 좌표로 접근하여 범위를 10미터로 좁힘
 
 6. 인증키 :
+B3xAD2Ck93FPbCmJPTuhYuSOZLrtbLBz0hZ5w5JVvwq7wAZP2jpuRIYQUkFrcRExXxZlp%2BQWeN5nObGl3RMvTg%3D%3D
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD-NNW6pg1bTBrAH_8cfU5V1mcPafzcdw&region=kr"></script>
