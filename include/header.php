@@ -8,8 +8,8 @@
     </div>
   </div>
   <div class="menu">
-    <a href="#"><i class="fa fa-home"></i></a>
-    <a href="#"><i class="fa fa-map-marker"></i></a>
+    <a href="/lbcamp/index.php"><i class="fa fa-home"></i></a>
+    <a href="/lbcamp/search_position.php?radi=10000"><i class="fa fa-map-marker"></i></a>
     <a href="#"><i class="fa fa-question"></i></a>
   </div>
 </header>
