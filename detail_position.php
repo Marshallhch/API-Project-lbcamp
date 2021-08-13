@@ -77,7 +77,7 @@
 
   <!-- Jquery Framework Load -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD-NNW6pg1bTBrAH_8cfU5V1mcPafzcdw&region=kr"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD-NNW6pg1bTBrAH_8cfU5V1mcPafzcdw&region=kr"></script>
   <script src="/lbcamp/js/main.js"></script>
   <script src="/lbcamp/js/detail_position.js"></script>
   <script>

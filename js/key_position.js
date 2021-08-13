@@ -12,29 +12,33 @@ $.ajax({
     let currentItems = "";
     // console.log(Array.isArray(item));
 
-    if(Array.isArray(item)){
-      item.forEach(function(data){
-        console.log(data);
-        currentItems = `
+    function itemDOM(el){
+      currentItems = `
                         <div class="carousel_item">
                           <div class="item_card">
-                            <a href="/lbcamp/detail_position.php?lon=${data.mapX}&lat=${data.mapY}">
+                            <a href="/lbcamp/detail_position.php?lon=${el.mapX}&lat=${el.mapY}">
                               <div class="sl_img">
-                                <img src="${data.firstImageUrl}" alt="" onerror="this.src='/lbcamp/img/no_image.png'">
+                                <img src="${el.firstImageUrl}" alt="" onerror="this.src='/lbcamp/img/no_image.png'">
                               </div>
                             </a>
                             <div class="sl_txt">
-                              <h2>${data.facltNm}</h2>
-                              <p>${data.addr1}</p>
+                              <h2>${el.facltNm}</h2>
+                              <p>${el.addr1}</p>
                             </div>
                             <div class="sl_icons">
                               <img src="img/ico_mart.png" alt="">
-                              <em>${data.sbrsCl}</em>
+                              <em>${el.sbrsCl}</em>
                             </div>
                           </div>
                         </div>
                       `;
         contentsBox.innerHTML += currentItems;
+    }
+
+    if(Array.isArray(item)){
+      item.forEach(function(data){
+        console.log(data);
+        itemDOM(data);
 
         //google map logics here..
         var map;
@@ -58,46 +62,27 @@ $.ajax({
         initMap();
       });
     } else {
-      currentItems = `
-                        <div class="carousel_item">
-                          <div class="item_card">
-                            <a href="/lbcamp/detail_position.php?lon=${item.mapX}&lat=${item.mapY}">
-                              <div class="sl_img">
-                                <img src="${item.firstImageUrl}" alt="" onerror="this.src='/lbcamp/img/no_image.png'">
-                              </div>
-                            </a>
-                            <div class="sl_txt">
-                              <h2>${item.facltNm}</h2>
-                              <p>${item.addr1}</p>
-                            </div>
-                            <div class="sl_icons">
-                              <img src="img/ico_mart.png" alt="">
-                              <em>${item.sbrsCl}</em>
-                            </div>
-                          </div>
-                        </div>
-                      `;
-        contentsBox.innerHTML += currentItems;
+      itemDOM(item);
 
-        //google map logics here..
-        var map;
+      //google map logics here..
+      var map;
 
-        function initMap() {
-          var centerTarget = { lat: Number(item.mapY), lng: Number(item.mapX) };
-          map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 12,
-              center: centerTarget
-            }
-          );
+      function initMap() {
+        var centerTarget = { lat: Number(item.mapY), lng: Number(item.mapX) };
+        map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 12,
+            center: centerTarget
+          }
+        );
 
-          new google.maps.Marker({
-            position: centerTarget,
-            map: map,
-            icon: '/lbcamp/img/marker.png'
-          });
+        new google.maps.Marker({
+          position: centerTarget,
+          map: map,
+          icon: '/lbcamp/img/marker.png'
+        });
 
-        }
-        initMap();
+      }
+      initMap();
     } 
 
     // google map logics here..

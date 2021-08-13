@@ -16,13 +16,18 @@
 4. Plugin
 - owl carousel
 
-5. 개발 중 문제 이슈
-- 오픈 데이터 수신 오류
-- 지도 표시 멀티 타겟 마커 적용
+5. 개발 중 문제 이슈 //
+- 오픈 데이터 수신 오류 //
+- 지도 표시 멀티 타겟 마커 적용 //
 - 상세 데이터 접근키 제공 안함 // 각각의 좌표로 접근하여 범위를 10미터로 좁힘
-- itemDOM 함수 refatoring
+- -- itemDOM 함수 refatoring // 
 
 6. 인증키 :
 B3xAD2Ck93FPbCmJPTuhYuSOZLrtbLBz0hZ5w5JVvwq7wAZP2jpuRIYQUkFrcRExXxZlp%2BQWeN5nObGl3RMvTg%3D%3D
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD-NNW6pg1bTBrAH_8cfU5V1mcPafzcdw&region=kr"></script>
+
+7. 해결과제
+
+- 미제공 데이터 undefined 처리
+- 로딩 처리
